@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }: any) => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.header}>🍽️ Restaurantes</Text>
