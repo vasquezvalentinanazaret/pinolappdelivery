@@ -1,4 +1,4 @@
-import React from "react";
+import { TouchableOpacity } from "react-native";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 
 const HomeScreen = ({ navigation }: any) => {
@@ -7,14 +7,23 @@ const HomeScreen = ({ navigation }: any) => {
       <Text style={styles.header}>🍽️ Restaurantes</Text>
 
       {/* Restaurante 1 */}
-      <View style={styles.card}>
-        <Text style={styles.name}>Fritanga Doña Rosa</Text>
-        <Text style={styles.description}>Gallo pinto, carne asada, tajadas</Text>
-      </View>
+      <TouchableOpacity
+  style={styles.card}
+  onPress={() =>
+    navigation.navigate("Restaurant", {
+      name: "Fritanga Doña Rosa",
+    })
+  }
+>
+  <Text style={styles.name}>Fritanga Doña Rosa</Text>
+  <Text style={styles.description}>
+    Gallo pinto, carne asada, tajadas
+  </Text>
+</TouchableOpacity>
 
       {/* Restaurante 2 */}
       <View style={styles.card}>
-        <Text style={styles.name}>Pollos El Buen Sabor</Text>
+        <Text style={styles.name}>name: "Comedor Mary"</Text>
         <Text style={styles.description}>Pollo frito, papas, refrescos</Text>
       </View>
 
