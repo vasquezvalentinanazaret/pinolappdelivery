@@ -5,7 +5,7 @@ const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const LoginScreen = ({ navigation }: any) => {
     // 🔐 luego conectamos backend
     console.log("Login:", email, password);
   };
