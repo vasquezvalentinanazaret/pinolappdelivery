@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }: any) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const LoginScreen = ({ navigation }: any) => {
-    // 🔐 luego conectamos backend
-    console.log("Login:", email, password);
-  };
+  const handleLogin = () => {
+  console.log("Login:", email, password);
+};
 
   return (
     <View style={styles.container}>
