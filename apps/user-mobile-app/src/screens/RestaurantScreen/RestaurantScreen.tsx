@@ -11,9 +11,16 @@ const RestaurantScreen = ({ route }: any) => {
       <Text style={styles.section}>Menú</Text>
 
       <View style={styles.item}>
-        <Text style={styles.itemName}>Gallo Pinto + Carne Asada</Text>
-        <Text style={styles.price}>$5</Text>
-      </View>
+  <Text style={styles.itemName}>Gallo Pinto + Carne Asada</Text>
+  <Text style={styles.price}>$5</Text>
+
+  <TouchableOpacity
+    style={styles.button}
+    onPress={() => console.log("Producto agregado")}
+  >
+    <Text style={styles.buttonText}>Agregar al carrito</Text>
+  </TouchableOpacity>
+</View>
 
       <View style={styles.item}>
         <Text style={styles.itemName}>Pollo Frito</Text>
@@ -61,3 +68,14 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 });
+button: {
+  marginTop: 10,
+  backgroundColor: "#22c55e",
+  padding: 10,
+  borderRadius: 8,
+  alignItems: "center",
+},
+buttonText: {
+  color: "#fff",
+  fontWeight: "bold",
+},
