@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-navigation.replace("Login");
+const SplashScreen = ({ navigation }: any) => {
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      // luego irá al login
-      console.log("Ir a Login...");
+      navigation.replace("Login");
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   subtitle: {
-    color: "#fff",
+    color: "#ffffff",
     marginTop: 10,
     fontSize: 14,
   },
